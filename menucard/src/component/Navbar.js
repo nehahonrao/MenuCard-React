@@ -1,19 +1,23 @@
 import React from 'react';
 import "./style.css";
 
-function Navbar() {
+function Navbar({filterItem,uniqueData}) {
   return <>
-  <nav className="navbar">
+   <nav className="navbar">
         <div className="btn-group">
-          <button className="btn-group__item">breakfast</button>
-        </div>
-        <div className="btn-group">
-          <button className="btn-group__item">Lunch</button>
-        </div>
-        <div className="btn-group">
-          <button className="btn-group__item">Dinner</button>
-        </div>
-  </nav>
+
+{uniqueData.map((currentElem)=>{
+  return(
+    <button className="btn-group__item" 
+    onClick={()=>filterItem(currentElem)} >
+   {currentElem}
+    </button>
+       
+  )
+})} 
+</div>
+</nav>
+         
   </>;
 }
 

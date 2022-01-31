@@ -14,7 +14,7 @@ return(
 {menuData.map((currentElem)=>{
 
 // destructuring of an array 
- const{id,image,name,category,description}= currentElem;
+ const{id,image,name,price,category,description}= currentElem;
   return(
   <>
   <div className="card-container">
@@ -26,7 +26,7 @@ return(
           <span className="card-description subtle">
            {description}
           </span>
-          <div className="card-read">Read</div>
+          <div className="card-read">{price}</div>
         </div>
         <img src={image} alt="images" className="card-media" />
 
