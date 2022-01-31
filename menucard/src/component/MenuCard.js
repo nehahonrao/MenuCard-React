@@ -8,8 +8,6 @@ return(
 
 {/* array map method */}
 
-
-
 <section className="main-card--cointainer">
 {menuData.map((currentElem)=>{
 
